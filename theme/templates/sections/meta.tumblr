@@ -1,6 +1,13 @@
-body {background:{BackgroundColor};}
+body {
+  background:{BackgroundColor};
+
+}
+.topbar__title, .masthead__title {
+  font-family: {TitleFont};
+}
 h1 > a {color:{TitleColor};}
 a {color:{AccentColor}}
-p {
-  color: red;
+
+.masthead__bg {
+  background-image: url('{HeaderImage}');
 }

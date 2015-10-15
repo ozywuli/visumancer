@@ -1,0 +1,9 @@
+{block:Hidden}
+  <!--
+    Custom theme options in the 'Hidden' block will not show when viewing the source code.
+    https://www.tumblr.com/docs/en/custom_themes#theme-options
+   <meta name="text:Twitter Username" content=""/>
+   -->
+  <!-- DEFAULT FONTS -->
+  <meta name="font:Body" content="Futura, Arial, Helvetica, sans-serif"/>
+{/block:Hidden}

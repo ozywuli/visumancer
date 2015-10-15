@@ -11,13 +11,7 @@
   <link rel="canonical" href="{block:IndexPage}{BlogURL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
 
-  {block:Hidden}
-    <!--
-      Custom theme options in the 'Hidden' block will not show when viewing the source code.
-      https://www.tumblr.com/docs/en/custom_themes#theme-options
-     <meta name="text:Twitter Username" content=""/>
-     -->
-  {/block:Hidden}
+  <!-- @include sections/theme_options.tumblr -->
 
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" type="text/css" media="all">
   <style>

@@ -1,0 +1,6 @@
+body {background:{BackgroundColor};}
+h1 > a {color:{TitleColor};}
+a {color:{AccentColor}}
+p {
+  color: red;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
+  {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+  <link rel="apple-touch-icon" href="{PortraitURL-128}">
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="canonical" href="{block:IndexPage}{BlogURL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+  {block:Hidden}
+    <!--
+      Custom theme options in the 'Hidden' block will not show when viewing the source code.
+      https://www.tumblr.com/docs/en/custom_themes#theme-options
+     <meta name="text:Twitter Username" content=""/>
+     -->
+  {/block:Hidden}
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" type="text/css" media="all">
+  <style>
+  <!-- @include ../../build/main.min.css -->
+  </style>
+  <style type="text/css">
+    /*Tumblr Global Appearance */
+    <!-- @include sections/meta.tumblr -->
+    /*Custom CSS*/
+    {CustomCSS}
+  </style>
+
+</head>
+
+
+
+
+<body>
+
+
+  <!-- #header -->
+  <!-- @include sections/header.tumblr -->
+  <!-- /header -->
+
+
+  <!-- #main -->
+  <main role="main" class="content">
+
+    {block:SearchPage}
+    <div class="result">
+      <p>{lang:Found SearchResultCount results for SearchQuery 2}</p>
+      {block:NoSearchResults}<p>{lang:No results for SearchQuery 2}</p>{/block:NoSearchResults}
+    </div>
+    {/block:SearchPage}
+
+    {block:TagPage}<div class="result"><p>{lang:TagResultCount posts tagged Tag 3}</p></div>{/block:TagPage}
+
+    <!-- #post types -->
+    {block:Posts}
+    <article class="post {PostType} {TagsAsClasses}">
+      {block:Date}
+        {block:NewDayDate}<p>{DayOfWeek}, {Month} {DayOfMonth}, {Year}</p>{/block:NewDayDate}
+        {block:SameDayDate}<p>{DayOfWeek}, {Month} {DayOfMonth}, {Year}</p>{/block:SameDayDate}
+      {/block:Date}
+
+
+      <!-- @include partials/block_text.tumblr -->
+      <!-- @include partials/block_quote.tumblr -->
+      <!-- @include partials/block_link.tumblr -->
+      <!-- @include partials/block_audio.tumblr -->
+      <!-- @include partials/block_photo.tumblr -->
+      <!-- @include partials/block_photoset.tumblr -->
+      <!-- @include partials/block_panorama.tumblr -->
+      <!-- @include partials/block_chat.tumblr -->
+      <!-- @include partials/block_answer.tumblr -->
+
+
+      {block:IndexPage}
+        {LikeButton color="grey"}
+        {ReblogButton color="grey"}
+        <p><a href="{Permalink}" class="permalink">{lang:Permalink}</a></p>
+      {/block:IndexPage}
+
+    </article>
+    {/block:Posts}
+    <!-- #post types -->
+
+
+    <!-- #permalink pagination -->
+    <!-- @include sections/permalink_pagination.tumblr -->
+    <!-- /permalink pagination -->
+
+    <!-- #permalink pagination -->
+    <!-- @include sections/pagination.tumblr -->
+    <!-- /permalink pagination -->
+
+
+
+  </main><!-- /main -->
+
+
+  <!-- #footer -->
+  <!-- @include sections/footer.tumblr -->
+  <!-- /footer -->
+

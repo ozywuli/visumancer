@@ -1,0 +1,13 @@
+<footer class="footer">
+  <small>{block:ShowTitle}{Title} {/block:ShowTitle}&copy; {CopyrightYears}</small>
+</footer>
+
+
+<script>
+    <!-- #custom js -->
+    <!-- @include ../../../build/main.min.js -->
+    <!-- /custom -->
+</script>
+
+</body>
+</html>

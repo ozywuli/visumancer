@@ -1,0 +1,9 @@
+{block:Photoset}
+  <figure{block:Caption} class="with-caption"{/block:Caption}>
+    {block:Photos}
+    <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+    {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+    {/block:Photos}
+    {block:Caption}<figcaption class="caption">{Caption}</figcaption>{/block:Caption}
+  </figure>
+{/block:Photoset}

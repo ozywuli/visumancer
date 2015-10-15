@@ -51,7 +51,7 @@
 
     <!-- #post types -->
     {block:Posts}
-    <article class="post {PostType} {TagsAsClasses}">
+    <article class="post {PostType} {TagsAsClasses}" id="{PostID}">
       {block:Date}
         {block:NewDayDate}<p>{DayOfWeek}, {Month} {DayOfMonth}, {Year}</p>{/block:NewDayDate}
         {block:SameDayDate}<p>{DayOfWeek}, {Month} {DayOfMonth}, {Year}</p>{/block:SameDayDate}

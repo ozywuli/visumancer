@@ -75,9 +75,9 @@ function compileJS() {
       .pipe(gulp.dest('./build'))*/
   return gulp.src('theme/js/main.js')
     .pipe(gulp.dest('build/'))
-    .pipe(rename({ suffix: '.min' }))
+/*    .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    .pipe(gulp.dest('build/'))
+    .pipe(gulp.dest('build/'))*/
 }
 
 

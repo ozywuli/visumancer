@@ -702,6 +702,16 @@ a {
 	vertical-align: middle;
 }
 
+.nav {
+	position: fixed;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.content {
+	background: #f1f1f1;
+}
+
 @media all and (min-width: 800px) {
 
 .masthead {

@@ -4,7 +4,7 @@
   var $container = $('.content');
 
   // Masonry + ImagesLoaded
-  $container.imagesLoaded(function(){
+  $container.imagesLoaded(function() {
     $container.masonry({
       // selector for entry content
       itemSelector: '.post',
@@ -40,8 +40,16 @@
       });
 
 
+      var $newElemsIDs = $newElems.map(function() {
+          console.log(this);
+          console.log(this.id);
+          return this.id
+      }).get();
 
-  });
+      Tumblr.LikeButton.get_status_by_post_ids($newElemsIDs);
+    }
+
+  );
   
   /**
    * OPTIONAL!

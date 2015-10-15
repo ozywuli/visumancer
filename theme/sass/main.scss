@@ -1,3 +1,4 @@
+@import 'settings';
 @import 'mixins';
 @import 'reset';
 @import 'normalize'; 
@@ -61,3 +62,16 @@
     display: table-cell;
     vertical-align: middle;
   }
+
+
+
+.nav {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.content {
+  background: #f1f1f1;
+}

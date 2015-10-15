@@ -15,7 +15,7 @@
 
 <!-- #custom js -->
 <script>
-<!-- @include ../../../build/main.min.js -->
+<!-- @include ../../../build/main.js -->
 </script>
 <!-- /custom -->
 

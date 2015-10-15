@@ -1,5 +1,13 @@
 <div role="topbar" class="topbar">
   <h1 class="topbar__title"><a href="/">{Title}</a></h1>
+
+  <form class="search" action="/search" method="get">
+    <input role="textbox" type="search" placeholder="{lang:Search}" name="q" value="{SearchQuery}">
+    <input role="button" type="submit" value="{lang:Search}">
+  </form>
+
+  <a href="#" class="nav-toggle">Toggle</a>
+
 </div>
 
 
@@ -29,10 +37,7 @@
 </header>
 
 
-<form class="search" action="/search" method="get">
-  <input role="textbox" type="search" placeholder="{lang:Search}" name="q" value="{SearchQuery}">
-  <input role="button" type="submit" value="{lang:Search}">
-</form>
+
 
 <nav role="navigation" class="nav">
   <ul>

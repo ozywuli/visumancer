@@ -66,4 +66,50 @@
     return false;
   });*/
 
+
+
+
+  // Toggle menu
+  var $menuToggle = $('.menu-toggle');
+
+  $menuToggle.on('click', function(e) {
+    e.preventDefault();
+
+    if ( !$('body').hasClass('nav--active') ) {
+      $('body').addClass('nav--active');
+    } else {
+      $('body').removeClass('nav--active');
+    }
+  });
+
+
+  // Search
+
+  var $searchToggle = $('.search-toggle');
+
+  $searchToggle.on('click', function(e) {
+    e.preventDefault();
+    $('.search input[type="search"]').focus();
+
+    if ( !$('body').hasClass('search--active') ) {
+      $('body').addClass('search--active');
+    } else {
+      $('body').removeClass('search--active');
+    }
+
+  });
+
+
+  $('body').on('click', function(e) {
+    console.log(1);
+    if ( !$menuToggle.is(e.target) && !$menuToggle.find('*').is(e.target) && !$('.nav').is(e.target) && !$('.nav').find('*').is(e.target) ) {
+      $('body').removeClass('nav--active');
+    }
+    if ( !$searchToggle.is(e.target) && !$searchToggle.find('*').is(e.target) && !$('.search').is(e.target) && !$('.search').find('*').is(e.target) ) {
+      $('body').removeClass('search--active');
+    }
+  })
+
+
+
 })();

@@ -76,6 +76,17 @@
       <!-- @include partials/block_answer.tumblr -->
 
 
+      {block:HasTags}
+        <div class="post__tags">
+          <ul>
+          {block:Tags}
+            <li><a href="{TagURLChrono}">#{URLSafeTag}</a></li>
+          {/block:Tags}
+          </ul>
+        </div>
+      {/block:HasTags}
+
+
       <div class="post__meta">
         {block:Date}
           {block:NewDayDate}<a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a>{/block:NewDayDate}

@@ -1,10 +1,6 @@
 <header role="banner" class="masthead">
 
-  {block:ShowDescription}
-    {block:Description}
-    <div class="description">{Description}</div>
-    {/block:Description}
-  {/block:ShowDescription}
+
   
   {block:ShowHeaderImage}
     <div class="masthead__bg"></div>
@@ -15,7 +11,7 @@
         <img src="{PortraitURL-128}" class="masthead__avatar">
       {/block:ShowAvatar}
       {block:ShowTitle}
-        <h1 class="masthead__title"><a href="/">{Title}</a></h1>
+        <h1 class="masthead__title"><a href="/" class="masthead__link">{Title}</a></h1>
       {/block:ShowTitle}
     </div>
 

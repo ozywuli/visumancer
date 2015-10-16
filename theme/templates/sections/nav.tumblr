@@ -1,8 +1,25 @@
-
 <nav role="navigation" class="nav">
+  <h2 class="nav__title">Menu</h2>
+
   <ul class="nav__links--pages">
     {block:HasPages}{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
     <li><a href="/archive">{lang:Archive}</a></li>
     {block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
   </ul>
+
+
+  <h3 class="nav__subtitle">Tags</h3>
+
+  <ul class="nav__links--pages">
+    <li><a href="http://visumancer.tumblr.com/tagged/data/chrono">Data</a></li>
+    <li><a href="http://visumancer.tumblr.com/tagged/maps/chrono">Maps</a></li>
+  </ul>
+
+  {block:ShowDescription}
+    {block:Description}
+    <h3 class="nav__subtitle">Description</h3>
+    <div class="description">{Description}</div>
+    {/block:Description}
+  {/block:ShowDescription}
+
 </nav>

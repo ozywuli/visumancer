@@ -91,6 +91,7 @@ function watchTask(error) {
     handleError(error);
     watchHTML();
     watchCSS();
+    watchJS();
 }
 
 

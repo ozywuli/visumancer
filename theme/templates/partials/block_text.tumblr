@@ -1,8 +1,8 @@
 {block:Text}
   {block:Body}
+  {block:Title}<h2 class="post__title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
   <div class="body-text">
     {Body}
   </div>
   {/block:Body}
-  {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
 {/block:Text}

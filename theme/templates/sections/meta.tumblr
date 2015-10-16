@@ -24,3 +24,7 @@ a:hover {
 .nav__links--pages a:before {
   background: {color:Link Hover};
 }
+
+.nav .nav__links--pages:after {
+  background: {AccentColor};
+}

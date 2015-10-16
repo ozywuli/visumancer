@@ -6,4 +6,6 @@
    -->
   <!-- DEFAULT FONTS -->
   <meta name="font:Body" content="Futura, Arial, Helvetica, sans-serif"/>
+
+  <meta name="color:Link Hover" content="#56AAC3" />
 {/block:Hidden}

@@ -19,26 +19,41 @@
      -->
     <!-- DEFAULT FONTS -->
     <meta name="font:Body" content="Futura, Arial, Helvetica, sans-serif"/>
+  
+    <meta name="color:Link Hover" content="#56AAC3" />
   {/block:Hidden}
 
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" type="text/css" media="all">
   <style>
-  .invisible,.nav{visibility:hidden}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;text-decoration:none}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}.masthead__bg,.topbar{top:0;right:0;left:0;background-color:#FFF}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend,td,th{padding:0}legend{border:0}table{border-collapse:collapse;border-spacing:0}body,html{width:100%;height:100%}html{font-size:62.5%}body{margin:0;font-size:1.5rem}.hidden{display:none!important}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.clearfix:after,.clearfix:before{content:" ";display:table}.clearfix:after{clear:both}.italic{font-style:italic}.topbar{position:fixed;z-index:20}.topbar__title{float:left;margin:0;font-size:2rem}.topbar__title a{display:block;padding:10px 20px;text-transform:uppercase}.masthead{position:relative;display:table;width:100%;height:100%;text-align:center}.masthead__bg{position:absolute;bottom:0;width:100%;height:100%;background-size:cover;background-attachment:fixed;background-repeat:no-repeat;background-position:center center}.masthead__intro{position:relative;display:table-cell;vertical-align:middle}.nav{position:fixed;opacity:0}.content{background:#f1f1f1}@media all and (min-width:800px){.masthead{height:400px}}
+  .menu-toggle svg,.nav .nav__links--pages a{transition:all 150ms ease}.clearfix:after,.notes{clear:both}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}body{line-height:1;margin:0}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;text-decoration:none}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}.masthead__bg,.topbar{background-color:#FFF;left:0;right:0}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}.italic,em,i{font-style:italic}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend,td,th{padding:0}legend{border:0}table{border-collapse:collapse;border-spacing:0}.hidden{display:none!important}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.masthead,.masthead__bg,body,html{width:100%;height:100%}.invisible{visibility:hidden}.clearfix:after,.clearfix:before{content:" ";display:table}*{box-sizing:border-box}html{font-size:62.5%}body{font-size:1.5rem}blockquote{border-left:1px solid #333;padding:5px 0 5px 15px}.topbar{position:fixed;top:0;box-shadow:0 1px 2px 0 rgba(0,0,0,.1);z-index:20}.topbar__title{float:left;margin:0;font-size:2rem;line-height:4.2rem}.topbar__title a{display:block;text-transform:uppercase}.menu-toggle{position:relative;float:left;margin:7.5px 15px}.menu-toggle:active{top:2px}.masthead{position:relative;display:table;text-align:center}.masthead__bg{position:absolute;top:0;bottom:0;background-size:cover;background-attachment:fixed;background-repeat:no-repeat;background-position:center center}.masthead__intro{position:relative;display:table-cell;vertical-align:middle;z-index:10}.masthead__intro a{color:#FFF}.nav{position:fixed;top:42px;left:0;bottom:0;width:300px;height:100%;background:#FFF;overflow-y:auto;z-index:15}.nav .nav__links--pages{margin-top:20px}.nav .nav__links--pages a{position:relative;display:block;padding:5px 10px}.nav .nav__links--pages a:before,.overlay{position:absolute;top:0;left:0;height:100%}.nav .nav__links--pages a:before{content:"";display:block;width:0;transition:all 150ms ease}.meta-actions li,.notes .action{display:inline-block}.nav .nav__links--pages a:hover{padding-left:13px}.nav .nav__links--pages a:hover:before{width:3px}.content,.overlay,.post img{width:100%}.container{background:#f1f1f1;padding:15px 0 15px 15px;overflow-x:hidden}.permalink-page .container{padding:100px 15px 60px}.permalink-page .content{margin:0 auto;max-width:600px}.overlay{right:0;bottom:0;background:rgba(0,0,0,.5)}.notes,.permalink-pagination a,.post-container{box-shadow:0 1px 2px 0 rgba(0,0,0,.1);background:#FFF}.post{color:#333}.post figure{margin:0}.body-text,.permalink-page .post,.post img,.post p{margin-bottom:10px}.meta-actions li,.permalink-pagination .next{margin-left:10px}.post img{height:auto}.post a{color:#888}.post a:hover{color:#56AAC3}.post-container{padding:10px 10px 20px}.post__meta{margin-top:20px;font-size:1.2rem;line-height:1.5rem}.grid-item,.grid-sizer{width:50%}.grid-item{float:left;padding:0 15px 15px 0}.post__meta-separator{color:#888}.meta-actions{float:right;font-size:0}.permalink-pagination{width:100%;margin-bottom:20px;font-size:0;text-transform:uppercase}.permalink-pagination a{display:inline-block;width:calc(50% - 5px);font-size:2rem;text-align:center;padding:10px 0}.notes{padding:10px}.notes .note{margin-bottom:10px}.notes img{width:24px;height:24px;margin:0}.notes .action{margin-left:10px;line-height:24px;vertical-align:top}.more_notes_link{display:block;margin-top:20px}@media all and (min-width:600px){.masthead{height:400px}}@media all and (min-width:900px){.content{margin:0 auto;max-width:1400px}.grid-item,.grid-sizer{width:33.33%}}@media all and (min-width:1200px){.grid-item,.grid-sizer{width:25%}.yellowfin{width:50%}}
   </style>
   <style type="text/css">
     /*Tumblr Global Appearance */
     body {
       background:{BackgroundColor};
-    
+      font-family: {font:Body}
     }
     .topbar__title, .masthead__title {
       font-family: {TitleFont};
     }
     h1 > a {color:{TitleColor};}
     a {color:{AccentColor}}
+    a:hover {
+      color: {color:Link Hover}
+    }
     
     .masthead__bg {
       background-image: url('{HeaderImage}');
+    }
+    
+    .menu-toggle:hover svg {
+    
+      fill: {color:Link Hover};
+    
+    }
+    
+    .nav__links--pages a:before {
+      background: {color:Link Hover};
     }
     /*Custom CSS*/
     {CustomCSS}
@@ -49,23 +64,58 @@
 
 
 
-<body>
+<body class="{block:PermalinkPage}permalink-page{/block:PermalinkPage}">
 
 
+<!-- #topbar -->
+<div role="topbar" class="topbar">
+
+  <a href="#" class="menu-toggle">
+    <span class="hidden">Menu Toggle</span>
+      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         width="25px" height="25px" viewBox="159.669 159.669 25 25" enable-background="new 159.669 159.669 25 25" xml:space="preserve">
+      <g>
+        <g>
+          <g>
+            <rect x="159.67" y="163.014" width="25" height="2.143"/>
+          </g>
+          <g>
+            <rect x="159.67" y="171.032" width="25" height="2.143"/>
+          </g>
+          <g>
+            <rect x="159.67" y="179.181" width="25" height="2.145"/>
+          </g>
+        </g>
+      </g>
+      </svg>
+      
+  </a>
+
+  <h1 class="topbar__title"><a href="/">{Title}</a></h1>
+
+  <form class="search" action="/search" method="get">
+    <input role="textbox" type="search" placeholder="{lang:Search}" name="q" value="{SearchQuery}">
+    <input role="button" type="submit" value="{lang:Search}">
+  </form>
+
+
+
+</div>
+<!-- /topbar -->
+
+<!-- #nav -->
+
+<nav role="navigation" class="nav">
+  <ul class="nav__links--pages">
+    {block:HasPages}{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
+    <li><a href="/archive">{lang:Archive}</a></li>
+    {block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
+  </ul>
+</nav>
+<!-- /nav -->
+
+{block:IndexPage}
   <!-- #header -->
-  <div role="topbar" class="topbar">
-    <h1 class="topbar__title"><a href="/">{Title}</a></h1>
-  
-    <form class="search" action="/search" method="get">
-      <input role="textbox" type="search" placeholder="{lang:Search}" name="q" value="{SearchQuery}">
-      <input role="button" type="submit" value="{lang:Search}">
-    </form>
-  
-    <a href="#" class="nav-toggle">Toggle</a>
-  
-  </div>
-  
-  
   <header role="banner" class="masthead">
   
     {block:ShowDescription}
@@ -89,23 +139,22 @@
   
   
   
+      <div class="overlay"></div>
+  
+  
+  
   </header>
   
   
   
   
-  <nav role="navigation" class="nav">
-    <ul>
-      {block:HasPages}{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
-      <li><a href="/archive">{lang:Archive}</a></li>
-      {block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
-    </ul>
-  </nav>
   <!-- /header -->
+{/block:IndexPage}
 
+<div class="container">
 
   <!-- #main -->
-  <main role="main" class="content">
+  <main role="main" class="content clearfix {block:IndexPage}js-content{/block:IndexPage}">
 
     {block:SearchPage}
     <div class="result">
@@ -118,20 +167,16 @@
 
     <!-- #post types -->
     {block:Posts}
-    <article class="post {PostType} {TagsAsClasses}" id="{PostID}">
-      {block:Date}
-        {block:NewDayDate}<p>{DayOfWeek}, {Month} {DayOfMonth}, {Year}</p>{/block:NewDayDate}
-        {block:SameDayDate}<p>{DayOfWeek}, {Month} {DayOfMonth}, {Year}</p>{/block:SameDayDate}
-      {/block:Date}
+    <article class="post {PostType} {TagsAsClasses} {block:IndexPage}js-post grid-item grid-sizer{/block:IndexPage}" id="{PostID}">
 
-
+      <div class="post-container">
       {block:Text}
-        {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
         {block:Body}
         <div class="body-text">
           {Body}
         </div>
         {/block:Body}
+        {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
       {/block:Text}
       {block:Quote}
         <blockquote class="words {Length}">&#8220;{Quote}&#8221;</blockquote>
@@ -204,11 +249,27 @@
       {/block:Answer}
 
 
-      {block:IndexPage}
-        {LikeButton color="grey"}
-        {ReblogButton color="grey"}
-        <p><a href="{Permalink}" class="permalink">{lang:Permalink}</a></p>
-      {/block:IndexPage}
+      <div class="post__meta">
+        {block:Date}
+          {block:NewDayDate}<a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a>{/block:NewDayDate}
+          {block:SameDayDate}<a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a>{/block:SameDayDate}
+        {/block:Date}
+
+        <span class="post__meta-separator">|</span>
+
+        <a href="{Permalink}" class="note-count">{NoteCountWithLabel}</a>
+
+        {block:IndexPage}
+        <div class="meta-actions">
+          <ul>
+            <li>{LikeButton color="grey" size="15"}</li>
+            <li>{ReblogButton color="grey" size="15"}</li>
+            <li><a href="{Permalink}" class="permalink"><span class="hidden">{lang:Permalink}</span></a></li>
+          </ul>
+        </div>
+        {/block:IndexPage}
+        </div>
+      </div>
 
     </article>
     {/block:Posts}
@@ -217,15 +278,20 @@
 
     <!-- #permalink pagination -->
     {block:PermalinkPagination}
-    <div class="pagination">
-      {block:PreviousPost}<a class="prev"href="{PreviousPost}">{lang:Previous post}</a>{/block:PreviousPost}
-      {block:NextPost}<a class="next" href="{NextPost}">{lang:Next post}</a>{/block:NextPost}
+    <div class="permalink-pagination">
+      {block:PreviousPost}<a class="prev"href="{PreviousPost}">{lang:Prev}</a>{/block:PreviousPost}
+      {block:NextPost}<a class="next" href="{NextPost}">{lang:Next}</a>{/block:NextPost}
     </div>
     {/block:PermalinkPagination}
     
     <!-- /permalink pagination -->
 
-    <!-- #permalink pagination -->
+      {block:PostNotes}
+      {PostNotes-64}
+      {/block:PostNotes}
+
+
+    <!-- #index pagination -->
     {block:Pagination}
     <div class="pagination">
       {block:PreviousPage}<a class="pagination__prev" href="{PreviousPage}">{lang:Previous}</a>{/block:PreviousPage}
@@ -238,12 +304,14 @@
       {block:NextPage}<a class="pagination__next" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
     </div>
     {/block:Pagination}
-    <!-- /permalink pagination -->
+    <!-- /index pagination -->
 
 
 
   </main><!-- /main -->
 
+
+</div>
 
   <!-- #footer -->
   <footer class="footer">
@@ -266,14 +334,15 @@
   (function() {
   
     // Main content container
-    var $container = $('.content');
+    var $container = $('.js-content');
   
     // Masonry + ImagesLoaded
     $container.imagesLoaded(function() {
       $container.masonry({
         // selector for entry content
-        itemSelector: '.post',
-        columnWidth: 200
+        itemSelector: '.js-post',
+        columnWidth: '.grid-sizer',
+        percentPosition: true
       });
     });
   
@@ -285,7 +354,7 @@
       // selector for the NEXT link (to page 2)
       nextSelector : ".pagination__next",
       // selector for all items you'll retrieve
-      itemSelector : ".post",
+      itemSelector : ".js-post",
   
       // finished message
       loading: {
@@ -304,8 +373,6 @@
           $container.masonry( 'appended', $newElems, true );
         });
   
-        console.log($newElems);
-        console.log($('.paul_ford'));
   
         var $newElemsIDs = $newElems.map(function() {
             console.log(this);

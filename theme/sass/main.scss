@@ -2,8 +2,9 @@
 @import 'mixins';
 @import 'reset';
 @import 'normalize'; 
-@import 'base';
 @import 'helper';
+@import 'base';
+
 
 
 .topbar {
@@ -11,6 +12,7 @@
   top: 0;
   right: 0;
   left: 0;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
   background-color: #FFF;
   @include z-index('topbar');
 }
@@ -18,11 +20,24 @@
     float: left;
     margin: 0;
     font-size: 2rem;
+    line-height: 4.2rem;
 
     a {
       display: block;
-      padding: 10px 20px;
       text-transform: uppercase;
+    }
+  }
+  .menu-toggle {
+    position: relative;
+    float: left;
+    margin: 7.5px 15px;
+
+    svg {
+      transition: all 150ms ease;
+    }
+
+    &:active {
+      top: 2px;
     }
   }
 
@@ -33,7 +48,7 @@
   height: 100%;
   text-align: center;
 
-  @include respond-to('medium') {
+  @include respond-to('small') {
     height: 400px;
   }
 
@@ -61,17 +76,227 @@
     position: relative;
     display: table-cell;
     vertical-align: middle;
+    @include z-index("masthead");
+    a {
+      color: #FFF;
+    }
   }
 
 
 
 .nav {
   position: fixed;
-  opacity: 0;
-  visibility: hidden;
+  top: 42px;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  height: 100%;
+  background: #FFF;
+  overflow-y: auto;
+  @include z-index("nav");
+
+  .nav__links--pages {
+    margin-top: 20px;
+    a {
+      position: relative;
+      display: block;
+      padding: 5px 10px;
+      transition: all 150ms ease;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: 0;
+        height: 100%;
+        transition: all 150ms ease;
+      }
+
+      &:hover {
+        padding-left: 13px;
+        &:before {
+          width: 3px;
+        }
+      }
+
+    }
+
+  }
+
+/*   opacity: 0;
+visibility: hidden; */
 }
 
 
-.content {
+.container {
   background: #f1f1f1;
+  padding: 15px 0 15px 15px;
+  overflow-x: hidden;
+
+  .permalink-page & {
+    padding: 100px 15px 60px 15px;
+  }
 }
+.content {
+  width: 100%;
+
+  @include respond-to('medium') {
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+
+  .permalink-page & {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+.post {
+
+  color: #333;
+
+  figure {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: $meta-link-color;
+
+    &:hover {
+      color: $meta-link-hover;
+    }
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  .permalink-page & {
+    margin-bottom: 10px;
+  }
+
+}
+  .post-container {
+    background: #FFF;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    padding: 10px 10px 20px 10px;
+  }
+  .post__meta {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+.grid-sizer, .grid-item {
+  width: 50%;
+}
+
+.grid-item {
+  float: left;
+  padding: 0 15px 15px 0;
+}
+
+.post__meta-separator {
+  color: $meta-link-color;
+}
+
+.meta-actions {
+  float: right;
+  font-size: 0;
+  li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+@include respond-to('medium') {
+  .grid-sizer, .grid-item {
+    width: 33.33%;
+  }
+}
+
+@include respond-to('large') {
+  .grid-sizer, .grid-item {
+    width: 25%;
+  }
+
+  .yellowfin {
+    width: 50%;
+  } 
+}
+
+.body-text {
+  margin-bottom: 10px;
+}
+
+
+.permalink-pagination {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 0;
+  text-transform: uppercase;
+  a {
+    display: inline-block;
+    width: calc(50% - 5px);
+    font-size: 2rem;
+    text-align: center;
+    background: #FFF;
+    padding: 10px 0;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  }
+  .next {
+    margin-left: 10px;
+  }
+
+}
+
+.note-count {
+
+}
+
+.notes {
+  clear: both;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background: #FFF;
+  .note {
+    margin-bottom: 10px;
+  }
+  img {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+  }
+  .action {
+    display: inline-block;
+    margin-left: 10px;
+    line-height: 24px;
+    vertical-align: top;
+  }
+}
+
+  .more_notes_link {
+    display: block;
+    margin-top: 20px;
+  }

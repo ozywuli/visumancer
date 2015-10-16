@@ -29,16 +29,27 @@
 
 
 
-<body>
+<body class="{block:PermalinkPage}permalink-page{/block:PermalinkPage}">
 
 
+<!-- #topbar -->
+<!-- @include sections/topbar.tumblr -->
+<!-- /topbar -->
+
+<!-- #nav -->
+<!-- @include sections/nav.tumblr -->
+<!-- /nav -->
+
+{block:IndexPage}
   <!-- #header -->
   <!-- @include sections/header.tumblr -->
   <!-- /header -->
+{/block:IndexPage}
 
+<div class="container">
 
   <!-- #main -->
-  <main role="main" class="content">
+  <main role="main" class="content clearfix {block:IndexPage}js-content{/block:IndexPage}">
 
     {block:SearchPage}
     <div class="result">
@@ -51,13 +62,9 @@
 
     <!-- #post types -->
     {block:Posts}
-    <article class="post {PostType} {TagsAsClasses}" id="{PostID}">
-      {block:Date}
-        {block:NewDayDate}<p>{DayOfWeek}, {Month} {DayOfMonth}, {Year}</p>{/block:NewDayDate}
-        {block:SameDayDate}<p>{DayOfWeek}, {Month} {DayOfMonth}, {Year}</p>{/block:SameDayDate}
-      {/block:Date}
+    <article class="post {PostType} {TagsAsClasses} {block:IndexPage}js-post grid-item grid-sizer{/block:IndexPage}" id="{PostID}">
 
-
+      <div class="post-container">
       <!-- @include partials/block_text.tumblr -->
       <!-- @include partials/block_quote.tumblr -->
       <!-- @include partials/block_link.tumblr -->
@@ -69,11 +76,27 @@
       <!-- @include partials/block_answer.tumblr -->
 
 
-      {block:IndexPage}
-        {LikeButton color="grey"}
-        {ReblogButton color="grey"}
-        <p><a href="{Permalink}" class="permalink">{lang:Permalink}</a></p>
-      {/block:IndexPage}
+      <div class="post__meta">
+        {block:Date}
+          {block:NewDayDate}<a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a>{/block:NewDayDate}
+          {block:SameDayDate}<a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a>{/block:SameDayDate}
+        {/block:Date}
+
+        <span class="post__meta-separator">|</span>
+
+        <a href="{Permalink}" class="note-count">{NoteCountWithLabel}</a>
+
+        {block:IndexPage}
+        <div class="meta-actions">
+          <ul>
+            <li>{LikeButton color="grey" size="15"}</li>
+            <li>{ReblogButton color="grey" size="15"}</li>
+            <li><a href="{Permalink}" class="permalink"><span class="hidden">{lang:Permalink}</span></a></li>
+          </ul>
+        </div>
+        {/block:IndexPage}
+        </div>
+      </div>
 
     </article>
     {/block:Posts}
@@ -84,14 +107,21 @@
     <!-- @include sections/permalink_pagination.tumblr -->
     <!-- /permalink pagination -->
 
-    <!-- #permalink pagination -->
+      {block:PostNotes}
+      {PostNotes-64}
+      {/block:PostNotes}
+
+
+    <!-- #index pagination -->
     <!-- @include sections/pagination.tumblr -->
-    <!-- /permalink pagination -->
+    <!-- /index pagination -->
 
 
 
   </main><!-- /main -->
 
+
+</div>
 
   <!-- #footer -->
   <!-- @include sections/footer.tumblr -->

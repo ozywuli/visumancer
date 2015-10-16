@@ -1,6 +1,6 @@
 {block:PermalinkPagination}
-<div class="pagination">
-  {block:PreviousPost}<a class="prev"href="{PreviousPost}">{lang:Previous post}</a>{/block:PreviousPost}
-  {block:NextPost}<a class="next" href="{NextPost}">{lang:Next post}</a>{/block:NextPost}
+<div class="permalink-pagination">
+  {block:PreviousPost}<a class="prev"href="{PreviousPost}">{lang:Prev}</a>{/block:PreviousPost}
+  {block:NextPost}<a class="next" href="{NextPost}">{lang:Next}</a>{/block:NextPost}
 </div>
 {/block:PermalinkPagination}

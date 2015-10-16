@@ -10,7 +10,7 @@
 
 $breakpoints: (
   'small': 600px,
-  'medium': 800px,
+  'medium': 900px,
   'large': 1200px,
 );
 
@@ -36,7 +36,8 @@ $breakpoints: (
 
 $z-index: (
   "topbar": 20,
-  "nav": 15
+  "nav": 15,
+  "masthead": 10
 );
 
 

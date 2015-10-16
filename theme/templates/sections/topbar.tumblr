@@ -1,0 +1,17 @@
+<div role="topbar" class="topbar">
+
+  <a href="#" class="menu-toggle">
+    <span class="hidden">Menu Toggle</span>
+      <!-- @include ../icons/menu.html -->
+  </a>
+
+  <h1 class="topbar__title"><a href="/">{Title}</a></h1>
+
+  <form class="search" action="/search" method="get">
+    <input role="textbox" type="search" placeholder="{lang:Search}" name="q" value="{SearchQuery}">
+    <input role="button" type="submit" value="{lang:Search}">
+  </form>
+
+
+
+</div>

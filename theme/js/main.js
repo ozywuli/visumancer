@@ -1,14 +1,15 @@
 (function() {
 
   // Main content container
-  var $container = $('.content');
+  var $container = $('.js-content');
 
   // Masonry + ImagesLoaded
   $container.imagesLoaded(function() {
     $container.masonry({
       // selector for entry content
-      itemSelector: '.post',
-      columnWidth: 200
+      itemSelector: '.js-post',
+      columnWidth: '.grid-sizer',
+      percentPosition: true
     });
   });
 
@@ -20,7 +21,7 @@
     // selector for the NEXT link (to page 2)
     nextSelector : ".pagination__next",
     // selector for all items you'll retrieve
-    itemSelector : ".post",
+    itemSelector : ".js-post",
 
     // finished message
     loading: {

@@ -1,13 +1,26 @@
 body {
   background:{BackgroundColor};
-
+  font-family: {font:Body}
 }
 .topbar__title, .masthead__title {
   font-family: {TitleFont};
 }
 h1 > a {color:{TitleColor};}
 a {color:{AccentColor}}
+a:hover {
+  color: {color:Link Hover}
+}
 
 .masthead__bg {
   background-image: url('{HeaderImage}');
+}
+
+.menu-toggle:hover svg {
+
+  fill: {color:Link Hover};
+
+}
+
+.nav__links--pages a:before {
+  background: {color:Link Hover};
 }

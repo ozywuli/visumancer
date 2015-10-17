@@ -666,6 +666,7 @@ i {
 blockquote {
 	border-left: 1px solid #333;
 	padding: 5px 0 5px 15px;
+	word-wrap: break-word;
 }
 
 .topbar {
@@ -693,7 +694,7 @@ blockquote {
 .menu-toggle {
 	position: relative;
 	float: left;
-	margin: 7.5px 15px;
+	margin: 7.5px 15px 7.5px 20px;
 }
 
 .menu-toggle svg {
@@ -710,6 +711,10 @@ blockquote {
 	margin: 7.5px 25px 7.5px 0;
 }
 
+.search-toggle:active {
+	top: 2px;
+}
+
 .search-toggle svg {
 	width: 23px;
 }
@@ -717,13 +722,12 @@ blockquote {
 .search {
 	position: absolute;
 	top: 52px;
-	left: 15px;
+	left: -200px;
 	background: #FFF;
 	padding: 10px;
 	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+	z-index: 5;
 	opacity: 0;
-	visibility: hidden;
-	transition: all 150ms ease;
 }
 
 .search input[type="submit"] {
@@ -734,9 +738,8 @@ blockquote {
 }
 
 .search--active .search {
-	top: 57px;
+	left: 20px;
 	opacity: 1;
-	visibility: visible;
 }
 
 .masthead {
@@ -794,6 +797,8 @@ blockquote {
 	width: 300px;
 	height: 100%;
 	background: #FFF;
+	border-right: 1px solid #f1f1f1;
+	transition: all 150ms ease;
 	opacity: 0;
 	visibility: hidden;
 	overflow-y: auto;
@@ -854,7 +859,7 @@ blockquote {
 
 .container {
 	background: #f1f1f1;
-	padding: 15px 0 15px 15px;
+	padding: 15px 0 150px 15px;
 	overflow-x: hidden;
 }
 
@@ -906,6 +911,7 @@ blockquote {
 
 .post p {
 	margin-bottom: 10px;
+	line-height: 1;
 }
 
 .permalink-page .post {
@@ -918,6 +924,10 @@ blockquote {
 	padding: 10px 10px 20px 10px;
 }
 
+.permalink-page .post-container {
+	padding: 20px;
+}
+
 .post__title {
 	margin-bottom: 10px;
 	font-size: 2rem;
@@ -927,10 +937,19 @@ blockquote {
 	color: #000;
 }
 
+.permalink-page .post__title {
+	margin-bottom: 20px;
+	font-size: 3.6rem;
+}
+
 .post__meta {
 	margin-top: 20px;
 	font-size: 1.2rem;
 	line-height: 1.5rem;
+}
+
+.post[id=""] .post__meta {
+	display: none;
 }
 
 .post__tags {
@@ -952,6 +971,10 @@ blockquote {
 .grid-item {
 	float: left;
 	padding: 0 15px 15px 0;
+}
+
+.yellowfin .post__title {
+	font-size: 2.8rem;
 }
 
 .post__meta-separator {
@@ -1017,9 +1040,32 @@ blockquote {
 	vertical-align: top;
 }
 
+.permalink-page .notes {
+	padding: 20px;
+}
+
 .more_notes_link {
 	display: block;
 	margin-top: 20px;
+}
+
+#infscr-loading {
+	position: absolute;
+	bottom: -100px;
+	left: 50%;
+	margin-left: -87px;
+	text-align: center;
+}
+
+#infscr-loading img {
+	width: 32px;
+	margin-bottom: 10px;
+}
+
+.footer {
+	margin: 40px auto;
+	padding: 0 20px;
+	max-width: 1400px;
 }
 
 @media all and (min-width: 600px) {
@@ -1053,6 +1099,14 @@ blockquote {
 
 .yellowfin {
 	width: 50%;
+}
+
+.yellowfin .post__title {
+	font-size: 3.6rem;
+}
+
+.permalink-page .yellowfin {
+	width: 100%;
 }
 
 }

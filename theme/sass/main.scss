@@ -30,7 +30,7 @@
   .menu-toggle {
     position: relative;
     float: left;
-    margin: 7.5px 15px;
+    margin: 7.5px 15px 7.5px 20px;
 
     svg {
       transition: all 150ms ease;
@@ -45,20 +45,24 @@
     float: left;
     margin: 7.5px 25px 7.5px 0;
 
+    &:active {
+      top: 2px;
+    }
+
     svg {
       width: 23px;
     }
+
   }
   .search {
     position: absolute;
     top: 52px;
-    left: 15px;
+    left: -200px;
     background: #FFF;
     padding: 10px;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    @include z-index('search');
     opacity: 0;
-    visibility: hidden;
-    transition: all 150ms ease;
 
     input[type="submit"] {
       background: #000;
@@ -68,9 +72,8 @@
     }
 
     .search--active & {
-      top: 57px;
+      left: 20px;
       opacity: 1;
-      visibility: visible;
     }
 
   }
@@ -141,6 +144,8 @@
   width: 300px;
   height: 100%;
   background: #FFF;
+  border-right: 1px solid #f1f1f1;
+  transition: all 150ms ease;
   opacity: 0;
   visibility: hidden; 
   overflow-y: auto;
@@ -206,7 +211,7 @@
 
 .container {
   background: #f1f1f1;
-  padding: 15px 0 15px 15px;
+  padding: 15px 0 150px 15px;
   overflow-x: hidden;
 
   .permalink-page & {
@@ -264,6 +269,7 @@
 
   p {
     margin-bottom: 10px;
+    line-height: 1;
   }
 
   .permalink-page & {
@@ -275,6 +281,11 @@
     background: #FFF;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
     padding: 10px 10px 20px 10px;
+
+    .permalink-page & {
+      padding: 20px;
+    }
+
   }
   .post__title {
     margin-bottom: 10px;
@@ -283,11 +294,20 @@
     a {
       color: #000;
     }
+
+    .permalink-page & {
+      margin-bottom: 20px;
+      font-size: 3.6rem;
+    }
   }
   .post__meta {
     margin-top: 20px;
     font-size: 1.2rem;
     line-height: 1.5rem;
+
+    .post[id=""] & {
+      display: none;
+    }
   }
   .post__tags {
     margin-top: 20px;
@@ -306,6 +326,12 @@
 .grid-item {
   float: left;
   padding: 0 15px 15px 0;
+}
+
+.yellowfin {
+  .post__title {
+    font-size: 2.8rem;
+  }
 }
 
 .post__meta-separator {
@@ -334,6 +360,14 @@
 
   .yellowfin {
     width: 50%;
+
+    .post__title {
+      font-size: 3.6rem;
+    }
+
+    .permalink-page & {
+      width: 100%;
+    }
   } 
 }
 
@@ -385,9 +419,42 @@
     line-height: 24px;
     vertical-align: top;
   }
+
+  .permalink-page & {
+    padding: 20px;
+  }
 }
 
   .more_notes_link {
     display: block;
     margin-top: 20px;
   }
+
+
+
+
+
+
+
+
+
+#infscr-loading {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    margin-left: -87px;
+    text-align: center;
+
+    img {
+      width: 32px;
+      margin-bottom: 10px;
+    }
+}
+
+
+
+.footer {
+  margin: 40px auto;
+  padding: 0 20px;
+  max-width: 1400px;
+}

@@ -28,3 +28,7 @@ a:hover {
 .nav .nav__links--pages:after {
   background: {AccentColor};
 }
+
+.search-toggle:hover svg {
+  fill: {color:Link Hover};
+}

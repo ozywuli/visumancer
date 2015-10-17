@@ -32,3 +32,8 @@ a:hover {
 .search-toggle:hover svg {
   fill: {color:Link Hover};
 }
+
+.link h2 a:hover {
+  background: {color:Link Hover};
+  color: #FFF;
+}

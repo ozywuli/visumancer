@@ -254,12 +254,18 @@
 
   figure {
     margin: 0;
+
+    & > a:hover img {
+      opacity: 0.7;
+    }
   }
 
   img {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
+    transition: all 150ms ease;
+
   }
 
   a {
@@ -321,6 +327,47 @@
       margin-bottom: 5px;
     }
   }
+
+
+
+
+.audio {
+
+}
+  .audio-player {
+    margin-bottom: 10px;
+
+    iframe {
+      width: 100%;
+    }
+  }
+
+
+.quote {
+  blockquote {
+    margin-bottom: 15px;
+    font-size: 2.8rem;
+  }
+}
+
+.link {
+  h2 a {
+    background: #888;
+    display: block;
+    color: #FFF;
+    padding: 10px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    transition: all 150ms ease;
+  }
+}
+
+
+
+
+
+
+
 
 .grid-sizer, .grid-item {
   width: 50%;

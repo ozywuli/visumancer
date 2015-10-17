@@ -22,4 +22,10 @@
     {/block:Description}
   {/block:ShowDescription}
 
+
+  <footer class="footer--nav">
+    <small>{block:ShowTitle}{Title} {/block:ShowTitle}&copy; {CopyrightYears}</small>
+    <p><small>Produced by <a href="http://ozywuli.com">Ozy Wu-Li</a></small></p>
+  </footer>
+
 </nav>

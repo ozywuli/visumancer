@@ -31,9 +31,15 @@
     position: relative;
     float: left;
     margin: 7.5px 15px 7.5px 20px;
+    display: block;
 
     svg {
       transition: all 150ms ease;
+      pointer-events: none;
+    }
+
+    rect {
+      pointer-events: none;
     }
 
     &:active {
@@ -51,6 +57,13 @@
 
     svg {
       width: 23px;
+      pointer-events: none;
+    }
+    g {
+      pointer-events: none;
+    }
+    path {
+      pointer-events: none;
     }
 
   }
@@ -71,13 +84,13 @@
       padding: 3px 5px;
     }
 
-    .search--active & {
+
+
+  }
+    .search--active {
       left: 20px;
       opacity: 1;
     }
-
-  }
-
 
 
 .masthead {
@@ -194,12 +207,13 @@
 
   transition: all 150ms ease;
 
-  .nav--active & {
-    opacity: 1;
-    visibility: visible;
-  }
-
 }
+
+.nav--active {
+  opacity: 1;
+  visibility: visible;
+} 
+
   .nav__title {
     padding: 20px 10px;
     font-size: 2rem;
@@ -278,7 +292,7 @@
 
   p {
     margin-bottom: 10px;
-    line-height: 1;
+    line-height: 1.5;
   }
 
   .permalink-page & {
@@ -359,6 +373,14 @@
     margin-bottom: 15px;
     line-height: 1.5;
     transition: all 150ms ease;
+  }
+}
+
+.video-player {
+  width: 100%;
+  margin-bottom: 15px;
+  iframe {
+    width: 100%;
   }
 }
 

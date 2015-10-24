@@ -665,7 +665,7 @@ i {
 
 blockquote {
 	border-left: 1px solid #333;
-	padding: 5px 0 5px 15px;
+	padding: 5px 0 0 15px;
 	word-wrap: break-word;
 }
 
@@ -695,10 +695,16 @@ blockquote {
 	position: relative;
 	float: left;
 	margin: 7.5px 15px 7.5px 20px;
+	display: block;
 }
 
 .menu-toggle svg {
 	transition: all 150ms ease;
+	pointer-events: none;
+}
+
+.menu-toggle rect {
+	pointer-events: none;
 }
 
 .menu-toggle:active {
@@ -717,6 +723,15 @@ blockquote {
 
 .search-toggle svg {
 	width: 23px;
+	pointer-events: none;
+}
+
+.search-toggle g {
+	pointer-events: none;
+}
+
+.search-toggle path {
+	pointer-events: none;
 }
 
 .search {
@@ -737,7 +752,7 @@ blockquote {
 	padding: 3px 5px;
 }
 
-.search--active .search {
+.search--active {
 	left: 20px;
 	opacity: 1;
 }
@@ -844,7 +859,7 @@ blockquote {
 	margin: 30px 10px;
 }
 
-.nav--active .nav {
+.nav--active {
 	opacity: 1;
 	visibility: visible;
 }
@@ -919,7 +934,7 @@ blockquote {
 
 .post p {
 	margin-bottom: 10px;
-	line-height: 1;
+	line-height: 1.5;
 }
 
 .permalink-page .post {
@@ -992,6 +1007,15 @@ blockquote {
 	margin-bottom: 15px;
 	line-height: 1.5;
 	transition: all 150ms ease;
+}
+
+.video-player {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.video-player iframe {
+	width: 100%;
 }
 
 .grid-sizer,

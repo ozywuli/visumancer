@@ -84,6 +84,7 @@ Year: 2015
       <!-- @include partials/block_quote.tumblr -->
       <!-- @include partials/block_link.tumblr -->
       <!-- @include partials/block_audio.tumblr -->
+      <!-- @include partials/block_video.tumblr -->
       <!-- @include partials/block_photo.tumblr -->
       <!-- @include partials/block_photoset.tumblr -->
       <!-- @include partials/block_panorama.tumblr -->

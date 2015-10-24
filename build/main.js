@@ -1,5 +1,67 @@
 (function() {
 
+
+
+$(document).ready(function() {
+
+  // Toggle menu
+  var $menuToggle = $('.menu-toggle');
+
+
+
+  $menuToggle.on('click', function(e) {
+    e.preventDefault();
+    console.log(e.target);
+
+    $('.nav').toggleClass('nav--active');
+
+  });
+
+
+
+  // Search
+
+  var $searchToggle = $('.search-toggle');
+
+  $searchToggle.on('click', function(e) {
+    e.preventDefault();
+    console.log('search toggled');
+    $('.search input[type="search"]').focus().addClass('test');
+
+    $('.search').toggleClass('search--active');
+
+  });
+
+
+
+
+
+  $('body').on('click', function(e) {
+    console.log(e.target);
+    if ( !$menuToggle.is(e.target) && !$menuToggle.find('*').is(e.target) && !$('.nav').is(e.target) && !$('.nav').find('*').is(e.target) ) {
+      $('.nav').removeClass('nav--active');
+    }
+    if ( !$searchToggle.is(e.target) && !$searchToggle.find('*').is(e.target) && !$('.search').is(e.target) && !$('.search').find('*').is(e.target) ) {
+      $('.search').removeClass('search--active');
+    }
+  });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // Main content container
   var $container = $('.js-content');
 
@@ -44,8 +106,6 @@
 
 
       var $newElemsIDs = $newElems.map(function() {
-          console.log(this);
-          console.log(this.id);
           return this.id
       }).get();
 
@@ -71,46 +131,8 @@
 
 
 
-  // Toggle menu
-  var $menuToggle = $('.menu-toggle');
-
-  $menuToggle.on('click', function(e) {
-    e.preventDefault();
-
-    if ( !$('body').hasClass('nav--active') ) {
-      $('body').addClass('nav--active');
-    } else {
-      $('body').removeClass('nav--active');
-    }
-  });
 
 
-  // Search
-
-  var $searchToggle = $('.search-toggle');
-
-  $searchToggle.on('click', function(e) {
-    e.preventDefault();
-    console.log(e.target);
-    $('.search input[type="search"]').focus().addClass('test');
-
-    if ( !$('body').hasClass('search--active') ) {
-      $('body').addClass('search--active');
-    } else {
-      $('body').removeClass('search--active');
-    }
-
-  });
-
-
-  $('body').on('click', function(e) {
-    if ( !$menuToggle.is(e.target) && !$menuToggle.find('*').is(e.target) && !$('.nav').is(e.target) && !$('.nav').find('*').is(e.target) ) {
-      $('body').removeClass('nav--active');
-    }
-    if ( !$searchToggle.is(e.target) && !$searchToggle.find('*').is(e.target) && !$('.search').is(e.target) && !$('.search').find('*').is(e.target) ) {
-      $('body').removeClass('search--active');
-    }
-  })
 
 
 
